@@ -1,0 +1,292 @@
+@charset "UTF-8";
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ccc;
+}
+#home {
+    background-size: cover;
+    background-image: url(images/home_B_&_W.jpg);
+}
+wrapper {
+    width: 1366px;
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+}
+header {
+    height: 0px;
+    background-color: #999;
+}
+footer {
+    padding: 16px;
+    font-size: 12px;
+    background-color: #000;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f2f2f2;
+    text-align: center;
+}
+nav {
+    background-color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+#4x4 {
+    margin-right: 26px;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+ul a li {
+    display: inline-block;
+    padding-top: 16px;
+    padding-right: 0px;
+    padding-bottom: 16px;
+    font-size: 35px;
+    color: #b9a48f;
+    margin-left: 31px;
+    margin-right: -4px;
+    text-align: left;
+}
+ul a li:hover {
+    color: #74513d;
+}
+#news {
+    background-image: url(images/news_B_and_W.jpg);
+    background-size: cover;
+}
+main {
+    padding: 20px;
+    height: 650px;
+}
+#travisscott {
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    margin-left: 50px;
+    font-size: 75px;
+    margin-top: 36px;
+}
+#latest {
+    margin-left: 50px;
+    margin-top: -18px;
+    font-size: 75px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-transform: capitalize;
+    color: #f2f2f2;
+}#nprsays {
+    margin-top: -24px;
+    margin-left: 50px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #BD9F8E;
+    font-size: 25px;
+}
+#title2 {
+    color: #f2f2f2;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 50px;
+    font-size: 40px;
+    margin-top: -11px;
+}
+#nprtitle {
+    margin-left: 50px;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f2f2f2;
+    text-transform: capitalize;
+    font-size: 40px;
+    padding-top: 0px;
+    margin-top: -60px;
+}
+#article2 {
+    margin-left: 50px;
+    padding-top: 0px;
+    margin-top: -19px;
+    color: #BD9F8E;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+}
+#store {
+    background-image: url(images/merch.jpg);
+    background-size: cover;
+}
+#storetitle {
+    margin-left: 50px;
+    margin-top: -18px;
+    font-size: 75px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    text-shadow: 0px 0px;
+}
+#storesubtitle {
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    margin-left: 50px;
+    font-size: 55px;
+    margin-top: -29px;
+}
+#videos {
+    background-image: url(images/videos.jpg);
+    background-size: cover;
+}
+#videostitle {
+	margin-left: 50px;
+    margin-top: -18px;
+    font-size: 55px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    text-shadow: 0px 0px;
+}
+#videomp4 {
+    margin-left: 250px;
+    margin-top: 62px;
+}
+#concerts {
+    background-image: url(images/tour.jpeg);
+}
+#concertstitle {
+	margin-left: 50px;
+    margin-top: -18px;
+    font-size: 55px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    text-shadow: 0px 0px;
+}
+#concerts iframe {
+    position: relative;
+    right: -150px;
+    top: -20px;
+    width: 500px;
+    height: 225px;
+}
+#photos {
+  background-image: url(images/photos.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+#photos img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#photostitle {
+    margin-left: 50px;
+    margin-top: -18px;
+    font-size: 55px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    text-shadow: 0px 0px;
+    grid-column: 1 / -1;
+    position: relative;
+    text-align: center;
+    left: -16px;
+}
+#mailings {
+    background-image: url(images/contact.jpeg);
+    background-size: cover;
+}
+#mailingstitle {
+  margin-left: 50px;
+  margin-top: -18px;
+  font-size: 55px;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+  text-transform: capitalize;
+  color: #f2f2f2;
+  text-shadow: 0px 0px;
+  grid-column: 1 / -1;
+}
+#subscribenow {
+  display: block;
+  margin: 10px auto; 
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #bea18f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#subscribenow:hover {
+  background-color: #000;
+}
+
+#emailInput {
+  display: block;
+  margin: 10px auto;
+  padding: 15px 30px; 
+  font-size: 1.2em;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  width: 300px; 
+}
+#merch {
+    background-image: url(images/merchextra.jpg);
+    background-size: cover;
+}
+
+#merchtitle {
+	margin-left: 50px;
+    margin-top: -18px;
+    font-size: 55px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-transform: capitalize;
+    color: #f2f2f2;
+    text-shadow: 0px 0px;
+}
+#merchimg {
+    position: relative;
+    right: -234px;
+    width: 835px;
+    height: 548px;
+    top: -17px;
+}
+#privacy {
+    background-image: url(images/privacy.jpeg);
+    background-size: cover;
+}
+#privacytext {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+}
+#blog {
+    background-image: url(images/blog.jpg);
+    background-size: cover;
+}
+#blogtitle {font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    margin-left: 50px;
+    font-size: 75px;
+    margin-top: 36px;
+}
+#blog {
+  background-image: url(images/blog.jpg); /* Replace with your image */
+  background-size: cover;
+  position: relative; /* Needed for absolute positioning */
+}
+
+#blogtitle {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+  margin-left: 50px;
+  font-size: 75px;
+  margin-top: 36px;
+}
+
+#blogdisclaimer {
+    position: absolute;
+    top: 40%; /* Adjust as needed */
+    right: 5%; /* Adjust as needed */
+    transform: translateY(-50%); /* Center vertically */
+    padding: 20px;
+    width: 40%; /* Adjust width as needed */
+    text-align: justify;
+    font-size: 28px;
+    color: #0d0d0d;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+}

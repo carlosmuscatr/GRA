@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Zumiez | Carlos Muscat 2025</title>
+    <style type="text/css">
+        body {
+    padding: 0;
+    margin: 0;
+    background-color: #232124;
+    font-family: sans-serif;
+        }
+        .wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+    background-color: #e4dcd1;
+        }
+#logo {
+    position: relative;
+    top: -57px;
+}
+        .header {
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #eee;
+    height: 54px;
+    position: relative;
+    left: 0px;
+        }
+        .header img {
+            max-width: 200px;
+        }
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            top: 10px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+        .banner {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+        .product-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .product-image {
+            width: 33%;
+        }
+        .product-image img {
+            max-width: 100%;
+            display: block;
+        }
+        .product-details {
+            width: 57%;
+        }
+        .product-details h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .product-details .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .product-details .review {
+            color: #00f;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .product-details p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .product-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        .product-details ul li {
+            margin-bottom: 5px;
+        }
+        .colors {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: left;
+            font-size: 12px;
+            color: #666;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        .color-swatches {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    margin-left: 18px;
+        }
+        .swatch {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+    #mainProductImage {
+    position: relative;
+    right: -38px;
+    width: 312px;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="images/logo_zumiez_final.png" alt="Garage Logo" id="logo">
+        </div>
+        <div class="nav">
+            <a href="#">SALE</a>
+            <a href="#">NEW</a>
+            <a href="#">MEN</a>
+            <a href="#">WOMEN</a>
+            <a href="#">KIDS</a>
+            <a href="#">SEARCH</a>
+        </div>
+        <div class="banner">
+            MARCH ONLY: FREE SHIPPING ON ORDERS $50 EVERY DAY!
+        </div>
+        <div class="product-container">
+            <div class="product-image">
+                <a href="#" onmouseover="swapImage(getCurrentSecondImageSrc())" onmouseout="restoreImage(getCurrentMainImageSrc())">
+                    <img src="images/Converter_black_1.jpg" alt="Black Flannel Shirt" width="300" height="500" id="mainProductImage">
+                </a>
+            </div>
+            <div class="product-details">
+                <h2 class="productname">Flannel Shirt</h2>
+                <div class="price">$35.98</div>
+                <div class="review">Write a review</div>
+                <p>Express your most authentic self with this stylish, fashionable flannel shirt.</p>
+                <ul>
+                    <li>100% Cotton</li>
+                    <li>Machine wash, cold</li>
+                    <li>Relaxed fit, stretch-knit</li>
+                    <li>Sober design</li>
+                    <li>Long sleeve</li>
+                </ul>
+                <div class="colors">
+                    <button id="black" onclick="changeColor('black')">Black</button>
+                    <button id="grey" onclick="changeColor('grey')">Grey</button>
+                    <button id="white" onclick="changeColor('white')">White</button>
+                </div>
+                <div class="color-swatches">
+                    <div class="swatch" style="background-color: #232124;"></div>
+                    <div class="swatch" style="background-color: #958c83;"></div>
+                    <div class="swatch" style="background-color: #c7c6c2;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2025, Carlos Muscat<br>
+            This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+        </div>
+    </div>
+
+    <script>
+        let currentColor = 'black'; // Track the currently selected color
+
+        function swapImage(newImageSrc) {
+            document.getElementById('mainProductImage').src = newImageSrc;
+        }
+
+        function restoreImage(originalImageSrc) {
+            document.getElementById('mainProductImage').src = originalImageSrc;
+        }
+
+        function changeColor(color) {
+            currentColor = color; // Update the current color
+            document.getElementById('mainProductImage').src = `images/Converter_${color}_1.jpg`;
+        }
+
+        function getCurrentMainImageSrc() {
+            return `images/Converter_${currentColor}_1.jpg`;
+        }
+
+        function getCurrentSecondImageSrc() {
+            return `images/Converter_${currentColor}_2.jpg`;
+        }
+    </script>
+</body>
+</html>

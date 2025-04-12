@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vista Voyage Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@500&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Funnel Sans', sans-serif;
+      background-image: url(background_img.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #276ecd;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #0d3ea1;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: #276ECD;
+      padding: 15px 10px;
+      gap: 10px;
+      color: rgba(0,0,0,1.00);
+    }
+
+    .tab {
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      transition: all 0.3s;
+      background-color: rgba(221,215,215,1.00);
+    }
+
+    .tab:hover,
+    .tab.active {
+      border-color: #ffcd00;
+      background-color: #f6f6f6;
+    }
+
+    .search-box {
+      margin: 30px auto;
+      width: 80%;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #2a2a93;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    .centered-img {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .centered-img img {
+      width: 711px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      color: white;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Vista Voyage Co.</div>
+    <nav>
+      <a href="#">Trips</a>
+      <a href="#">About</a>
+      <a href="#">Support</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <div class="tabs">
+    <div class="tab active" onclick="setCategory('Flights')">✈️ Flights</div>
+    <div class="tab" onclick="setCategory('Hotel')">🛏 Hotel</div>
+    <div class="tab" onclick="setCategory('Cars')">🚗 Cars</div>
+    <div class="tab" onclick="setCategory('Cruises')">🚢 Cruises</div>
+    <div class="tab" onclick="setCategory('Vacations')">🧳 Vacations</div>
+  </div>
+
+  <div class="search-box" id="formBox">
+    <input type="text" placeholder="Departing From">
+    <input type="date">
+    <input type="text" placeholder="Arriving To">
+    <input type="date">
+    <select>
+      <option>No. of Traveler</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3+</option>
+    </select>
+    <button>Search</button>
+  </div>
+
+  <div class="centered-img">
+    <img src="offer_img.png" alt="Center Image">
+  </div>
+
+  <footer>
+    © 2025, Carlos Muscat. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const formBox = document.getElementById('formBox');
+
+    function setCategory(category) {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+
+      let html = '';
+      switch (category) {
+        case 'Flights':
+          html = `
+            <input type="text" placeholder="Departing From">
+            <input type="date">
+            <input type="text" placeholder="Arriving To">
+            <input type="date">
+            <select>
+              <option>No. of Traveler</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3+</option>
+            </select>
+            <button>Search</button>`;
+          break;
+        case 'Hotel':
+          html = `
+            <input type="text" placeholder="City or Destination">
+            <input type="date">
+            <input type="date">
+            <select>
+              <option>No. of Rooms</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3+</option>
+            </select>
+            <button>Search</button>`;
+          break;
+        case 'Cars':
+          html = `
+            <input type="text" placeholder="Pickup Location">
+            <input type="date">
+            <input type="text" placeholder="Drop-off Location">
+            <input type="date">
+            <select>
+              <option>Car Type</option>
+              <option>Economy</option>
+              <option>SUV</option>
+              <option>Luxury</option>
+            </select>
+            <button>Search</button>`;
+          break;
+        case 'Cruises':
+          html = `
+            <input type="text" placeholder="Departure Port">
+            <input type="date">
+            <input type="text" placeholder="Destination">
+            <select>
+              <option>Cruise Line</option>
+              <option>Royal Caribbean</option>
+              <option>Carnival</option>
+              <option>Norwegian</option>
+            </select>
+            <button>Search</button>`;
+          break;
+        case 'Vacations':
+          html = `
+            <input type="text" placeholder="Starting City">
+            <input type="date">
+            <input type="text" placeholder="Vacation Spot">
+            <input type="date">
+            <select>
+              <option>Duration</option>
+              <option>3-5 days</option>
+              <option>1 week</option>
+              <option>2+ weeks</option>
+            </select>
+            <button>Search</button>`;
+          break;
+      }
+
+      formBox.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
